@@ -8,7 +8,12 @@ https://devchallenge.it/ </br>
 All-Ukrainian software development championship among junior, middle and senior programmers. The championship takes place in 3 stages: Qualification, Semifinal and offline Finals in Kyiv. Participants compete in eleven nominations in three directions: Web, Mobile, Game. Each nomination has 2 categories: Pro (Senior, Middle-to-Senior) and Standard (Middle, Junior-to-Middle).
 At the final, the tasks were from the partner Amazon.
 
-# Build:
+### Task
+You can find the task in **back-endprofinaltaskdevchallenge11.pdf**
+
+# Solution
+
+### Run solution:
 `docker-compose up` </br>
 
 **This command is running next applications:**
