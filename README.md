@@ -23,20 +23,19 @@ You can find the task in **back-endprofinaltaskdevchallenge11.pdf**
 - main service </br>
 - callcenter - two replicas </br>
 
-I've chosen microservice architecture with RESTful microservices. I wont write about all advantages of this aproach. </br>
-I've wrote this microservice patterns: </br>
-ServiceConfig - microservice for saving all microservices settings.</br>
-ServiceRegistry - using Eureka service registry by Netflix. After running open - localhost:8010/ </br>
-CircuitBrikear and LoadBalancer - after runnig, open http://localhost:8001/hystrix, write http://localhost:8001/hystrix.stream in field and push button "Monitor System". </br>
-Added Swagger Api for testing rest services. After running open localhost:8001/swagger-ui.html </br>
+I've chosen microservice architecture with RESTful microservices. I won't write about all advantages of this approach. </br>
+I've written this microservice patterns: </br>
+- ServiceConfig - microservice for saving all microservices settings.</br>
+- ServiceRegistry - using Eureka service registry by Netflix. After running open - localhost:8010/ </br>
+- CircuitBrikear and LoadBalancer - after running, open http://localhost:8001/hystrix, write http://localhost:8001/hystrix.stream in the field and push button "Monitor System". </br>
+Added Swagger API for testing rest services. After running open localhost:8001/swagger-ui.html </br>
 
-As my DB I've chosen mongoDB - open-source cross-platform document-oriented database. I think it's working well for tasks as this. </br>
+As my DB I've chosen MongoDB - open-source cross-platform document-oriented database. I think it's working well for tasks like this. </br>
 
 # System architecture:
-All requests come to server_main - gateway, after it's balancing with two replicas callcenter microservices. For scalable we can run more microservices. If some microservices will fall, gateway will use anouther microservice. If all microservices will fall, gateway will response customer-readble message. Callcenter microservice finds employees with requriments and chose optimized emloyees with less expertise areas in EmployeeService.class in server_client(callcenter) module.
-Not enough time for write more tests, so I wrote tests for main logics.</br>
+All requests come to server_main - gateway, after it's balancing with two replicas call center microservices. For scalable we can run more microservices. If some microservices will fall, the gateway will use another microservice. If all microservices will fall, a gateway will response customer-readable message. Call center microservice finds employees with requirements and chose optimized employees with fewer expertise areas in EmployeeService.class in server_client(call center) module. Not enough time for writing more tests, so I wrote tests for main logic.</br>
 
-**I've change response representation(comparing to instruction) cos I think it's better approach for scalable microservices.**
+**I've change response representation(comparing to instruction) cos I think it's the better approach for scalable microservices.**
 
 #### For scalable systems:
 We should run few ServiceConfig and ServiceRegistry replicas.</br>
